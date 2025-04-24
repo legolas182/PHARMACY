@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy - Tu farmacia de confianza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Pharmacy</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Bienvenid@ a Pharmacy</h2>
+            <p>Tu farmacia confiable para medicamentos, vitaminas y productos de cuidado personal.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button>Buscar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section class="products">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200" alt="Paracetamol">
+                    </div>
+                    <div class="product-info">
+                        <h3>Paracetamol</h3>
+                        <p class="product-price">$5.99</p>
+                        <button class="add-to-cart" onclick="addToCart('Paracetamol', 5.99)">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200" alt="Vitamina C">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vitamina C</h3>
+                        <p class="product-price">$8.50</p>
+                        <button class="add-to-cart" onclick="addToCart('Vitamina C', 8.50)">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200" alt="Jarabe para la tos">
+                    </div>
+                    <div class="product-info">
+                        <h3>Jarabe para la tos</h3>
+                        <p class="product-price">$12.75</p>
+                        <button class="add-to-cart" onclick="addToCart('Jarabe para la tos', 12.75)">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200" alt="Termómetro digital">
+                    </div>
+                    <div class="product-info">
+                        <h3>Termómetro digital</h3>
+                        <p class="product-price">$15.99</p>
+                        <button class="add-to-cart" onclick="addToCart('Termómetro digital', 15.99)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal del Carrito -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Los productos se agregarán aquí dinámicamente -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="total">$0.00</span></p>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Pharmacy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
